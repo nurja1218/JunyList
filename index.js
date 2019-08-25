@@ -1,13 +1,18 @@
-const junyInfo = {
-    name: "junYoung",
-    age: 30,
-    gender: "male",
-    livenIn: "Guri",
-    favMovies: []
-};
+const title = document.querySelector("#title");
 
-console.log(junyInfo.gender);
+const CLICK_CLASS = "clicked";
 
-junyInfo.gender = "female";
+function handleClick() {
+    const currentClass = title.className;
+    if(currentClass !== CLICK_CLASS){
+        title.className = CLICK_CLASS;
+    } else {
+        title.className = "";
+    }
+}
 
-console.log(junyInfo.gender);
+function init() {
+    title.addEventListener("click", handleClick);
+}
+
+init();
