@@ -6,6 +6,10 @@ body {
     cursor: pointer;
 }
 
+body {
+    color: #34495e;
+}
+
 h1 {
     color: #2980b9;
     transition: color 0.5s ease-in-out;
@@ -13,4 +17,13 @@ h1 {
 
 .clicked {
     color: #f1c40f;
+}
+
+.form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
 }
