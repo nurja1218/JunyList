@@ -10,10 +10,17 @@ function saveToDos() {
     localStorage.setItem(TODO_LS, JSON.stringify(toDos));
 }
 
+function handleClick(event) {
+    const btn = event.target;
+    const li = btn.parentElement;
+    toDoList.removeChild(li);
+}
+
 function paintToDo(text) {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     delBtn.innerText = "❌";
+    delBtn.addEventListener("click", handleClick);
     const span = document.createElement("span");
     span.innerText = text;
     const newId = toDos.length + 1;
